@@ -6,7 +6,7 @@ from scipy import stats
 chat_id = 700385968 # Ваш chat ID, не меняйте название переменной
 
 def solution(x: np.array, y: np.array) -> bool:
-    pval = scipy.stats.ks_2samp(x, y).pvalue
+    pval = stats.ks_2samp(x, y).pvalue
     if (pval < 0.1):
       ans = True
     else:
